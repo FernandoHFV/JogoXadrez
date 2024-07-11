@@ -5,7 +5,7 @@ using tabuleiro;
 using xadrez;
 
 namespace xadrez_console
-{// criando classe posicaoXadrez, Definição de cores, classe partidaDeXadrez, Jogada
+{// // Teste de movimentacao, 
     class Program
     {
         static void Main(string[] args)
@@ -13,7 +13,7 @@ namespace xadrez_console
 
             try
             {
-               PartidaDeXadrez partida = new PartidaDeXadrez();
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
                 while (!partida.terminada)
                 {
@@ -21,9 +21,15 @@ namespace xadrez_console
                     Tela.imprimirTabuleiro(partida.tab);
 
 
-
+                    Console.WriteLine();
                     Console.Write("Origem: ");
                     Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+
+                    bool[,] posicoesPossiveis = partida.tab.peca(origem).movimentosPossiveis();
+
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab, posicoesPossiveis);
+
                     Console.Write("Destino: ");
                     Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 

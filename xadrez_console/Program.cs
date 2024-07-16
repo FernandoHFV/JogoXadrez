@@ -5,7 +5,7 @@ using tabuleiro;
 using xadrez;
 
 namespace xadrez_console
-{// // Passagem de turno, Restricoes de movimento
+{// Pecas capturadas e em jogo
     class Program
     {
         static void Main(string[] args)
@@ -21,10 +21,7 @@ namespace xadrez_console
                     {
 
                         Console.Clear();
-                        Tela.imprimirTabuleiro(partida.tab);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: " + partida.turno);
-                        Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual); ;
+                        Tela.imprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");

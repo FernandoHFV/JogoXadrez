@@ -2,7 +2,7 @@
 using xadrez;
 using tabuleiro;
 using System.Collections.Generic;
-
+using System.Xml;
 
 namespace xadrez_console
 {
@@ -16,6 +16,10 @@ namespace xadrez_console
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
             Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            if (partida.xeque)
+            {
+                Console.WriteLine("XEQUE!");
+            }
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)

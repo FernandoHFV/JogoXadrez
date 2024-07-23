@@ -40,7 +40,7 @@ namespace xadrez
                     mat[pos.linha, pos.coluna] = true;
                 }
                 pos.definirValores(posicao.linha - 2, posicao.coluna);
-                if (tab.posicaoValida(pos) && livre(pos) && qteMovimentos == 0);
+                if (tab.posicaoValida(pos) && livre(pos) && qteMovimentos == 0)
                 {
                     mat[pos.linha, pos.coluna] = true;
                 }
@@ -63,7 +63,7 @@ namespace xadrez
                     mat[pos.linha, pos.coluna] = true;
                 }
                 pos.definirValores(posicao.linha + 2, posicao.coluna);
-                if (tab.posicaoValida(pos) && livre(pos) && qteMovimentos == 0) ;
+                if (tab.posicaoValida(pos) && livre(pos) && qteMovimentos == 0)
                 {
                     mat[pos.linha, pos.coluna] = true;
                 }

@@ -90,7 +90,7 @@ namespace xadrez
             }
 
             //Noroeste
-            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
 
 
             while (tab.posicaoValida(pos) && podeMover(pos))
@@ -106,7 +106,7 @@ namespace xadrez
 
             // Nordeste
 
-            pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
 
 
             while (tab.posicaoValida(pos) && podeMover(pos))
